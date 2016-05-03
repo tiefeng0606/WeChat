@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tiefeng="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@mipmap/background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="微信"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="80dp"
+            android:background="@mipmap/search" />
+
+        <Button
+            android:id="@+id/button_more"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/more" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#33000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <com.example.administrator.weichart.activity.view.MyView
+            android:id="@+id/weixin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tiefeng:bottomBitmap="@mipmap/weixin"
+            tiefeng:tiefengtext="微信"
+            tiefeng:tiefengtextsize="16sp"
+            tiefeng:topBitmap="@mipmap/weixin_green" />
+
+        <com.example.administrator.weichart.activity.view.MyView
+            android:id="@+id/tongxunlu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tiefeng:bottomBitmap="@mipmap/tongxunlu"
+            tiefeng:tiefengtext="通讯录"
+            tiefeng:tiefengtextsize="16sp"
+            tiefeng:topBitmap="@mipmap/tongxunlu_green" />
+
+        <com.example.administrator.weichart.activity.view.MyView
+            android:id="@+id/faxian"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tiefeng:bottomBitmap="@mipmap/faxian"
+            tiefeng:tiefengtext="发现"
+            tiefeng:tiefengtextsize="16sp"
+            tiefeng:topBitmap="@mipmap/faxian_green" />
+
+        <com.example.administrator.weichart.activity.view.MyView
+            android:id="@+id/wo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tiefeng:bottomBitmap="@mipmap/wo"
+            tiefeng:tiefengtext="我"
+            tiefeng:tiefengtextsize="16sp"
+            tiefeng:topBitmap="@mipmap/wo_green" />
+    </LinearLayout>
+
+</LinearLayout>
